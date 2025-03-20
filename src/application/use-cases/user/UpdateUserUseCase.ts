@@ -1,9 +1,9 @@
 import { hash } from "bcryptjs";
-import { isValidCPF } from "/application/operations/isValidCPF";
-import { transformUserToDTO } from "/application/operations/user/transformeUserToDTO";
-import { IUserRepository } from "/domain/models/entities/User";
-import { UpdateUserDTO } from "/web/dtos/auth/UpdateUserDTO";
-import { ReadUserDTO } from "/web/dtos/user/ReadUserDTO";
+import { UpdateUserDTO } from "../../../web/dtos/auth/UpdateUserDTO";
+import { isValidCPF } from "../../operations/isValidCPF";
+import { transformUserToDTO } from "../../operations/user/transformeUserToDTO";
+import { IUserRepository, User } from "../../../domain/models/entities/User";
+import { ReadUserDTO } from "../../../web/dtos/user/ReadUserDTO";
 
 export class UpdateUserUseCase {
     constructor(private userRepository: IUserRepository) { }

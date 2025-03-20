@@ -1,5 +1,5 @@
+import { ListUserUseCase } from "../../../application/use-cases/user/ListUserUseCase";
 import { Request, Response } from 'express';
-import { ListUserUseCase } from '/application/use-cases/user/ListUserUseCase';
 
 export class ListUserController {
     constructor(private listUserUseCase: ListUserUseCase) {}

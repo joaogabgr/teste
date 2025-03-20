@@ -1,16 +1,16 @@
 import { Router } from "express";
+import { UserRepository } from "../../infrastructure/repositories/UserRepository";
+import { DeleteUserUseCase } from "../../application/use-cases/user/DeleteUserUseCase";
+import { ListUserUseCase } from "../../application/use-cases/user/ListUserUseCase";
+import { ReadUserUseCase } from "../../application/use-cases/user/ReadUserUseCase";
+import { UpdateUserUseCase } from "../../application/use-cases/user/UpdateUserUseCase";
 import { DeleteUserController } from "../controllers/user/DeleteUserController";
 import { ListUserController } from "../controllers/user/ListUserController";
 import ReadUserController from "../controllers/user/ReadUserController";
 import { UpdateUserController } from "../controllers/user/UpdateUserController";
-import { DeleteUserUseCase } from "/application/use-cases/user/DeleteUserUseCase";
-import { ListUserUseCase } from "/application/use-cases/user/ListUserUseCase";
-import { ReadUserUseCase } from "/application/use-cases/user/ReadUserUseCase";
-import { UpdateUserUseCase } from "/application/use-cases/user/UpdateUserUseCase";
-import { ensureAuthenticated } from "/infrastructure/middlewares/ensureAuthenticated";
-import { ensureAuthenticatedAdmin } from "/infrastructure/middlewares/ensureAuthenticatedAdmin";
-import { limiter } from "/infrastructure/middlewares/limiter";
-import { UserRepository } from "/infrastructure/repositories/UserRepository";
+import { limiter } from "../../infrastructure/middlewares/limiter";
+import { ensureAuthenticated } from "../../infrastructure/middlewares/ensureAuthenticated";
+import { ensureAuthenticatedAdmin } from "../../infrastructure/middlewares/ensureAuthenticatedAdmin";
 
 const userRoutes = Router();
 const userRepository = new UserRepository()

@@ -1,5 +1,5 @@
+import { ReadUserUseCase } from "../../../application/use-cases/user/ReadUserUseCase";
 import { Request, Response } from "express";
-import { ReadUserUseCase } from "/application/use-cases/user/ReadUserUseCase";
 
 export default class ReadUserController {
     constructor(private readUserUseCase: ReadUserUseCase) {}

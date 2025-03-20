@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { DeleteUserUseCase } from "/application/use-cases/user/DeleteUserUseCase";
+import { DeleteUserUseCase } from "../../../application/use-cases/user/DeleteUserUseCase";
 
 export class DeleteUserController {
     constructor(private deleteUserUseCase: DeleteUserUseCase) {}

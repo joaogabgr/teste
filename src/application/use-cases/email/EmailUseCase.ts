@@ -1,4 +1,4 @@
-import { IEmailSender } from "/domain/interfaces/IEmailSender";
+import { IEmailSender } from '../../../domain/interfaces/IEmailSender';
 
 export class EmailUseCase {
     private static instance: EmailUseCase;

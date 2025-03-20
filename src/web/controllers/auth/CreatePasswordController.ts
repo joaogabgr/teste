@@ -1,5 +1,5 @@
+import CreatePasswordUseCase from "../../../application/use-cases/auth/CreatePasswordUseCase";
 import { Request } from "express";
-import CreatePasswordUseCase from "/application/use-cases/auth/CreatePasswordUseCase";
 
 export default class CreatePasswordController {
     constructor(private createPasswordUseCase: CreatePasswordUseCase) {}

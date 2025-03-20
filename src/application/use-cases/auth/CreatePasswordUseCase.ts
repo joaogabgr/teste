@@ -1,5 +1,5 @@
 import { hash } from "bcryptjs";
-import { IUserRepository } from "/domain/models/entities/User";
+import { IUserRepository } from "../../../domain/models/entities/User";
 
 export default class CreatePasswordUseCase {
     constructor(private userRepository: IUserRepository) {}

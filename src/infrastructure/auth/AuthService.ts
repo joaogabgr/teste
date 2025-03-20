@@ -1,5 +1,5 @@
 import { verify } from 'jsonwebtoken';
-import { TokenPayload } from '/domain/interfaces/TokenPayload';
+import { TokenPayload } from '../../domain/interfaces/TokenPayload';
 
 export class AuthService {
     private static instance: AuthService;

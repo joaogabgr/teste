@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import RegisterUserDTO from '/web/dtos/auth/RegisterUserDTO';
-import { RegisterUseCase } from '/application/use-cases/auth/RegisterUseCase';
+import { RegisterUseCase } from '../../../application/use-cases/auth/RegisterUseCase';
+import RegisterUserDTO from '../../dtos/auth/RegisterUserDTO';
 
 export class RegisterController {
     constructor(private registerUseCase: RegisterUseCase) {}

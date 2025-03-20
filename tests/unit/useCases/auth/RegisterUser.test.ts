@@ -1,9 +1,10 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { RegisterUseCase } from "/application/use-cases/auth/RegisterUseCase";
-import { IUserRepository, User } from "/domain/models/entities/User";
-import RegisterUserDTO from '/web/dtos/auth/RegisterUserDTO';
+import { RegisterUseCase } from "@/application/use-cases/auth/RegisterUseCase";
+import { IUserRepository, User } from "@/domain/models/entities/User";
+import { MockEmailSender } from "../../mocks/MockEmailSender";
+import RegisterUserDTO from '@/web/dtos/auth/RegisterUserDTO';
 
 describe("Testando registro de usuário quando os dados forem corretos", () => {
     let registerUseCase: RegisterUseCase;

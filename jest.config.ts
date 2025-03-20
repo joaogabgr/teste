@@ -18,7 +18,7 @@ module.exports = {
 
   // Mapeamento de módulos (opcional, útil para testes com módulos ES6)
   moduleNameMapper: {
-    "^/(.*)$": "<rootDir>/src/$1", // Exemplo de alias para imports
+    "^@/(.*)$": "<rootDir>/src/$1", // Exemplo de alias para imports
   },
 
   // Configurações adicionais para TypeScript

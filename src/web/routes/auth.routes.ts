@@ -1,13 +1,14 @@
 import { Router } from 'express';
-import CreatePasswordUseCase from '../../application/use-cases/auth/CreatePasswordUseCase';
-import CreatePasswordController from '../controllers/auth/CreatePasswordController';
+import { AuthUseCase } from '../../application/use-cases/auth/AuthUseCase';
+import { RegisterUseCase } from '../../application/use-cases/auth/RegisterUseCase';
+import { UserRepository } from '../../infrastructure/repositories/UserRepository';
 import { AuthController } from '../controllers/auth/AuthController';
 import { RegisterController } from '../controllers/auth/RegisterController';
-import { AuthUseCase } from '/application/use-cases/auth/AuthUseCase';
-import { RegisterUseCase } from '/application/use-cases/auth/RegisterUseCase';
-import { ensureAuthenticatedAdmin } from '/infrastructure/middlewares/ensureAuthenticatedAdmin';
-import { limiter } from '/infrastructure/middlewares/limiter';
-import { UserRepository } from '/infrastructure/repositories/UserRepository';
+import { limiter } from '../../infrastructure/middlewares/limiter';
+import { ensureAuthenticatedAdmin } from '../../infrastructure/middlewares/ensureAuthenticatedAdmin';
+
+import CreatePasswordUseCase from '../../application/use-cases/auth/CreatePasswordUseCase';
+import CreatePasswordController from '../controllers/auth/CreatePasswordController';
 
 const authRoutes = Router();
 const userRepository = new UserRepository();
